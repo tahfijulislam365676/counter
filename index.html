@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/public/counter.png" />
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="min-h-screen bg-slate-950 text-white px-5 py-8 sm:px-10">
+            <div class="mx-auto max-w-5xl">
+
+                <!-- Header -->
+                <header class="flex items-center justify-between border-b border-slate-800 pb-6">
+                    <div class="flex items-center gap-3">
+                        <img class="h-11 w-11 flex  items-center justify-center rounded-xl bg-indigo-600 text-xl font-bold"
+                            src="/public/counter.png" alt="">
+                        <div>
+                            <h1 class="text-xl font-bold tracking-tight">Counter</h1>
+                            <p class="text-xs text-slate-400">Simple. Clean. Productive.</p>
+                        </div>
+                    </div>
+                    <span
+                        class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-400">
+                        ● Ready </span>
+                </header>
+
+                <!-- Main -->
+                <main class="py-12 sm:py-16">
+                    <div class="mb-10 text-center">
+                        <p class="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-indigo-400">
+                            Counter Dashboard
+                        </p>
+                        <h2 class="text-3xl font-bold sm:text-4xl">
+                            Keep track of every count.
+                        </h2>
+                        <p class="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-400 sm:text-base">
+                            A minimal and elegant counter interface designed to help you
+                            stay focused and organized.
+                        </p>
+                    </div>
+
+                    <!-- Counter Card -->
+                    <section
+                        class="mx-auto max-w-xl rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl shadow-black/20 sm:p-10">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-slate-400">Current Count</p>
+                                <p class="mt-1 text-xs text-slate-500">Your counter overview</p>
+                            </div>
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M12 6v12m6-6H6" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="my-10 rounded-2xl border border-slate-800 bg-slate-950/80 px-4 py-10 text-center">
+                            <span id="count" class="block text-7xl font-bold tracking-tight sm:text-8xl">
+                                0
+                            </span>
+                            <span class="mt-4 inline-block rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">
+                                Total count
+                            </span>
+                        </div>
+
+                        <!-- Static Buttons -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <button id="decrement" type="button"
+                                class="flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800 px-5 py-4 font-semibold text-slate-200">
+                                <span class="text-xl">−</span>
+                                Decrement
+                            </button>
+
+                            <button id="increment" type="button"
+                                class="flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-4 font-semibold text-white shadow-lg shadow-indigo-600/20">
+                                <span class="text-xl">+</span>
+                                Increment
+                            </button>
+                        </div>
+
+                        <button id="reset" type="button"
+                            class="mt-4 w-full rounded-xl border border-slate-800 px-5 py-3.5 text-sm font-medium text-slate-400">
+                            ↻ Reset Counter
+                        </button>
+
+                        <p class="mt-6 text-center text-xs text-slate-500">
+                            Counter controls are for display only.
+                        </p>
+                    </section>
+
+                    <!-- Summary Cards -->
+                    <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                            <p class="text-sm text-slate-400">Current Session</p>
+                            <p id="currentSessionCount" class="mt-3 text-2xl font-bold">000</p>
+                            <p class="mt-1 text-xs text-slate-500">Session count</p>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                            <p class="text-sm text-slate-400">Highest Count</p>
+                            <p id="highestCount" class="mt-3 text-2xl font-bold">000</p>
+                            <p class="mt-1 text-xs text-slate-500">Personal record</p>
+                        </div>
+
+                        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+                            <p class="text-sm text-slate-400">Total Sessions</p>
+                            <p id="totalSessionsCount" class="mt-3 text-2xl font-bold">00</p>
+                            <p class="mt-1 text-xs text-slate-500">Sessions completed</p>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Footer -->
+                <footer class="border-t border-slate-800 py-6 text-center">
+                    <p class="text-xs text-slate-500">
+                        Counter App · Designed for simplicity
+                    </p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
